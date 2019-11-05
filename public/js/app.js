@@ -7,7 +7,7 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   messageOne.innerText = 'loading...';
 
-  fetch('http://localhost:3000/weather?address=' + search.value)
+  fetch('./weather?address=' + search.value)
     .then( data => data.json().then( d => {
       messageOne.innerText = d.location;
       messageTwo.innerText = d.data;
